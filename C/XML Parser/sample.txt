@@ -1,0 +1,24 @@
+<ss:Workbook>
+	<ss:Styles>
+		<ss:Style ss:ID=”s123”></ss:Style>
+		<ss:Style ss:ID=”x123”></ss:Style>
+	</ss:Styles>
+	<ss:Worksheet ss:Name=”sheet1”>
+		<ss:Table ss:ExpandedColumnCount=”2”>
+			<ss:Column ss:StyleID="s123"/>
+			<ss:Column ss:StyleID="s123"/>
+			<ss:Row>
+				<ss:Cell>
+					<ss:Data ss:Type="Number">200</ss:Data>
+					<ss:Data ss:Type="String">popa</ss:Data>
+				</ss:Cell>
+			</ss:Row>
+			<ss:Row>
+				<ss:Cell>
+					<ss:Data ss:Type="Boolean">true</ss:Data>
+				</ss:Cell>
+			</ss:Row>
+		</ss:Table>
+	</ss:Worksheet>
+</ss:Workbook>
+

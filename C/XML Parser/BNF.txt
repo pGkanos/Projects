@@ -1,0 +1,48 @@
+<ss:Workbook> ::=  [<ss:Styles>] <ss:Worksheet>;
+	
+<ss:Styles> ::=  [<ss:Style>];
+
+<ss:Style> :=  " "  ID=<alphartithitiko>;	 
+
+<ss:Worksheet>  ::= [<ss:Table>]
+		    ss:Name=<alphartithitiko> 
+		    [ss:Protected]=<Boolean>;
+
+<ss:Table>  ::= [<ss:Column>] 
+		[<ss:Row>]
+		[ss:ExpandedColumnCount]=<posnum>
+		[ss:ExpandedRowCount]=<posnum>
+		[ss:StyleID]=<alphartithitiko>;
+
+<ss:Column> ::= " "  
+		[ss:Hidden]=<Boolean>
+		[ss:Width]=<posnum> 
+		[ss:StyleID]=<alphartithitiko>;
+
+<ss:Row  ::= [ss:Cell] 
+	     [ss:Height]=<posnum> 
+	     [ss:Hidden]=<posnum>
+	     [ss:StyleID]=<alphartithitiko>;
+
+<ss:Cell> ::= [ss:Data]
+	      [ss:MergeAcross]=<posnum> 
+	      [ss:MergeDown]=<posnum>
+              [ss:StyleID]=<alphartithitiko>;
+				;
+
+<ss:Data> ::= <keimeno>|" ")
+	      ss:Type=("Number"|"DateTime"|"Boolean"|"String");
+
+
+
+<alphartithitiko> ::= "<letter><digit><symbol>";
+
+<letter>::= a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z;
+
+<digit> ::= 0|1|2|3|4|5|6||7|8|9;
+
+<symbol> ::= "!"|"@"|"#"|"$"|"%"|"^"|"&"|"*"|","|"."|"~"|"!"|"?";
+
+<Boolean> ::= true|false;
+
+<posnum>  ::= <digit>+;
